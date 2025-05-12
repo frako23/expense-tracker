@@ -1,5 +1,7 @@
 import BackButton from "@/components/BackButton";
+import Input from "@/components/Input";
 import ScreenWrapper from "@/components/ScreenWrapper";
+import Typo from "@/components/Typo";
 import { colors, spacingX, spacingY } from "@/constants/theme";
 import { verticalScale } from "@/utils/styling";
 import React from "react";
@@ -10,7 +12,22 @@ const Login = () => {
     <ScreenWrapper>
       <View style={styles.container}>
         <BackButton iconSize={28} />
-        <View style={{ gap: 5, marginTop: spacingY._20 }}></View>
+        <View style={{ gap: 5, marginTop: spacingY._20 }}>
+          <Typo size={30} fontWeight={"800"}>
+            Hey,
+          </Typo>
+          <Typo size={30} fontWeight={"800"}>
+            Welcome Back
+          </Typo>
+        </View>
+        {/* form */}
+        <View style={styles.form}>
+          <Typo size={16} color={colors.textLighter}>
+            Login now to track all your expenses
+          </Typo>
+          {/* input */}
+          <Input />
+        </View>
       </View>
     </ScreenWrapper>
   );
